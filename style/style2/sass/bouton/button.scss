@@ -1,0 +1,24 @@
+@import "../variables/variables.scss";
+.btnCommander{
+    text-align: center;
+    width: 100%;
+}
+
+button{
+    background: linear-gradient(360deg, #9356dc,  #ff79da);
+    color: $wbg;
+    border-radius: 30px;
+    border: none;
+    padding: 1rem;
+    font-size: inherit;
+    transform: scale(1);
+    transition: transform 400ms;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 1px 1px #937e7e;
+     
+    &:hover{
+        transform: scale(1.15); 
+        opacity: 0.50;
+        box-shadow: 0px 0px 1px 2px #2e2929
+     }
+}

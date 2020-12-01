@@ -1,0 +1,27 @@
+#entrees{
+    animation: apparition 1000ms 200ms both ease-in-out;
+}
+
+.plats{
+    animation: apparition 1000ms 600ms both ease-in-out;
+}
+
+.desserts{
+        animation: apparition 1000ms 1000ms both ease-in-out;
+}
+#entrees, .plats, .desserts{
+    transform: translateY(0);
+ }
+
+ @keyframes apparition{
+    0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+}
+100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+}
