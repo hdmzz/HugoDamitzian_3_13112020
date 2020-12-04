@@ -4,12 +4,12 @@
 }
 
 button {
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
-  background: linear-gradient(360deg, #9356dc, #ff79da);
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(360deg, #9356DC, #FF79DA);
   color: #fff;
   border-radius: 30px;
   border: none;
-  padding: 1rem;
+  padding: 1rem 3rem 1rem 3rem;
   font-size: inherit;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -20,6 +20,7 @@ button {
   margin-bottom: 2rem;
   -webkit-box-shadow: 0px 0px 1px 1px #937e7e;
           box-shadow: 0px 0px 1px 1px #937e7e;
+  font-family: 'Roboto', serif;
 }
 
 button:hover {

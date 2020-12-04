@@ -1,6 +1,6 @@
 .blocMenu {
-  background-color: #f2f2f2;
-  border-radius: 1rem 1rem 0 0;
+  background-color: #f6f6f6;
+  border-radius: 2rem 2rem 0 0;
   position: relative;
   padding: 1rem;
   margin-top: -3rem;
@@ -16,12 +16,18 @@
 
 .blocMenu .animationsEtPrix .prix {
   margin-right: 1rem;
+  position: relative;
+  top: 13px;
+  font-weight: bold;
 }
 
-.blocMenu #entrees, .blocMenu .plats, .blocMenu .desserts {
-  width: 100%;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+.blocMenu .animationsEtPrix .animation {
+  -webkit-animation: slideOut;
+          animation: slideOut;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .blocMenu .titreEntre {
@@ -46,16 +52,13 @@
   width: 99%;
 }
 
-.blocMenu .carte:hover .animationsEtPrix .prix {
-  -webkit-transform: translateX(-70px);
-          transform: translateX(-70px);
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
-}
-
 .blocMenu .carte:hover .animationsEtPrix .animation {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  -webkit-animation: slidein;
+          animation: slidein;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .blocMenu .carte:hover .fa-check-circle {
@@ -66,7 +69,6 @@
 }
 
 .blocMenu .carte:hover .contenueCarte {
-  width: 60%;
   -webkit-transition: 600ms ease-in-out;
   transition: 600ms ease-in-out;
 }
@@ -76,9 +78,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  width: 80%;
-  -webkit-transition: 600ms ease-in-out;
-  transition: 600ms ease-in-out;
+  width: 100%;
 }
 
 .animationsEtPrix {
@@ -92,30 +92,13 @@
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  -webkit-transition: 500ms 100ms ease-in-out;
-  transition: 500ms 100ms ease-in-out;
-}
-
-.animationsEtPrix .prix {
-  position: relative;
-  left: 70px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
-  top: 13px;
 }
 
 .animationsEtPrix .animation {
   background-color: #99E2D0;
   position: relative;
   height: 5rem;
-  width: 4rem;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  transition: opacity 100ms, transform 300ms 100ms linear, -webkit-transform 300ms 100ms linear;
+  width: 0;
 }
 
 .animationsEtPrix .fa-check-circle {
@@ -123,5 +106,41 @@
   top: 40%;
   left: 40%;
   color: #fff;
+}
+
+@-webkit-keyframes slidein {
+  0% {
+    width: 0;
+  }
+  to {
+    width: 70px;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    width: 0;
+  }
+  to {
+    width: 70px;
+  }
+}
+
+@-webkit-keyframes slideOut {
+  from {
+    width: 70px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    width: 70px;
+  }
+  to {
+    width: 0;
+  }
 }
 /*# sourceMappingURL=animationPrixEncoche.css.map */

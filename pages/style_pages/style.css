@@ -6,12 +6,12 @@
 }
 
 button {
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
-  background: linear-gradient(360deg, #9356dc, #ff79da);
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(360deg, #9356DC, #FF79DA);
   color: #fff;
   border-radius: 30px;
   border: none;
-  padding: 1rem;
+  padding: 1rem 3rem 1rem 3rem;
   font-size: inherit;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -22,6 +22,7 @@ button {
   margin-bottom: 2rem;
   -webkit-box-shadow: 0px 0px 1px 1px #937e7e;
           box-shadow: 0px 0px 1px 1px #937e7e;
+  font-family: 'Roboto', serif;
 }
 
 button:hover {
@@ -125,8 +126,8 @@ button:hover {
 }
 
 .blocMenu {
-  background-color: #f2f2f2;
-  border-radius: 1rem 1rem 0 0;
+  background-color: #f6f6f6;
+  border-radius: 2rem 2rem 0 0;
   position: relative;
   padding: 1rem;
   margin-top: -3rem;
@@ -142,12 +143,18 @@ button:hover {
 
 .blocMenu .animationsEtPrix .prix {
   margin-right: 1rem;
+  position: relative;
+  top: 13px;
+  font-weight: bold;
 }
 
-.blocMenu #entrees, .blocMenu .plats, .blocMenu .desserts {
-  width: 100%;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+.blocMenu .animationsEtPrix .animation {
+  -webkit-animation: slideOut;
+          animation: slideOut;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .blocMenu .titreEntre {
@@ -172,16 +179,13 @@ button:hover {
   width: 99%;
 }
 
-.blocMenu .carte:hover .animationsEtPrix .prix {
-  -webkit-transform: translateX(-70px);
-          transform: translateX(-70px);
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
-}
-
 .blocMenu .carte:hover .animationsEtPrix .animation {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  -webkit-animation: slidein;
+          animation: slidein;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .blocMenu .carte:hover .fa-check-circle {
@@ -192,7 +196,6 @@ button:hover {
 }
 
 .blocMenu .carte:hover .contenueCarte {
-  width: 60%;
   -webkit-transition: 600ms ease-in-out;
   transition: 600ms ease-in-out;
 }
@@ -202,9 +205,7 @@ button:hover {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  width: 80%;
-  -webkit-transition: 600ms ease-in-out;
-  transition: 600ms ease-in-out;
+  width: 100%;
 }
 
 .animationsEtPrix {
@@ -218,30 +219,13 @@ button:hover {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  -webkit-transition: 500ms 100ms ease-in-out;
-  transition: 500ms 100ms ease-in-out;
-}
-
-.animationsEtPrix .prix {
-  position: relative;
-  left: 70px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
-  top: 13px;
 }
 
 .animationsEtPrix .animation {
   background-color: #99E2D0;
   position: relative;
   height: 5rem;
-  width: 4rem;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  transition: opacity 100ms, transform 300ms 100ms linear, -webkit-transform 300ms 100ms linear;
+  width: 0;
 }
 
 .animationsEtPrix .fa-check-circle {
@@ -249,6 +233,90 @@ button:hover {
   top: 40%;
   left: 40%;
   color: #fff;
+}
+
+@-webkit-keyframes slidein {
+  0% {
+    width: 0;
+  }
+  to {
+    width: 70px;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    width: 0;
+  }
+  to {
+    width: 70px;
+  }
+}
+
+@-webkit-keyframes slideOut {
+  from {
+    width: 70px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    width: 70px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+#entrees {
+  -webkit-animation: apparition 1000ms 200ms both ease-in-out;
+          animation: apparition 1000ms 200ms both ease-in-out;
+}
+
+.plats {
+  -webkit-animation: apparition 1000ms 600ms both ease-in-out;
+          animation: apparition 1000ms 600ms both ease-in-out;
+}
+
+.desserts {
+  -webkit-animation: apparition 1000ms 1000ms both ease-in-out;
+          animation: apparition 1000ms 1000ms both ease-in-out;
+}
+
+#entrees, .plats, .desserts {
+  width: 99%;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  margin-bottom: 1rem;
+}
+
+@-webkit-keyframes apparition {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 
 .titreBloc {
@@ -261,22 +329,26 @@ button:hover {
   width: 100%;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: "Shrikhand", serif;
   text-decoration: none;
+}
+
+h3 {
+  font-family: "Roboto", serif;
+}
+
+h4 {
+  font-size: large;
 }
 
 p, h4 {
   font-family: 'Roboto', serif;
 }
 
-h4 {
-  font-size: 90%;
-}
-
 p {
-  font-size: 65%;
   padding-top: 10px;
+  font-size: 95%;
 }
 
 h2, h1 {
@@ -316,45 +388,30 @@ header .fa-arrow-left {
   padding-left: 1rem;
 }
 
-img {
+main #imgDeFond {
+  height: 18rem;
+}
+
+main #imgDeFond img {
   width: 100%;
-  height: 15rem;
+  height: 18rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.prix {
-  font-size: smaller;
-}
-
-#entrees {
-  -webkit-animation: apparition 1000ms 200ms both ease-in-out;
-          animation: apparition 1000ms 200ms both ease-in-out;
-}
-
-.plats {
-  -webkit-animation: apparition 1000ms 600ms both ease-in-out;
-          animation: apparition 1000ms 600ms both ease-in-out;
-}
-
-.desserts {
-  -webkit-animation: apparition 1000ms 1000ms both ease-in-out;
-          animation: apparition 1000ms 1000ms both ease-in-out;
-}
-
-#entrees, .plats, .desserts {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+.borderBottomTitre {
+  margin-bottom: 1rem;
 }
 
 .titreEntrees, .titreDessert {
   padding-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .titreEntrees::after, .titreDessert::after {
   content: "";
   display: block;
-  width: 15%;
+  width: 10%;
   border-bottom: 2px #99E2D0 solid;
 }
 
@@ -428,9 +485,6 @@ footer li {
   .blocMenu #entrees, .blocMenu .plats, .blocMenu .desserts {
     width: 46%;
   }
-  .blocMenu .animationsEtPrix {
-    left: 90%;
-  }
   .blocMenu .btnCommander {
     width: 100%;
   }
@@ -444,31 +498,6 @@ footer li {
 }
 
 /* Keyframes */
-@-webkit-keyframes apparition {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-@keyframes apparition {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
 @-webkit-keyframes loading {
   0% {
     opacity: 1;
@@ -477,7 +506,6 @@ footer li {
     opacity: 0;
   }
 }
-
 @keyframes loading {
   0% {
     opacity: 1;

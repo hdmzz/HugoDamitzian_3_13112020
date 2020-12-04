@@ -4,28 +4,33 @@
 @import "../../style/style2/sass/bouton/button.scss";
 @import "../../style/style2/sass/coeur/coeur.scss";
 @import "../../style/style2/sass/animationPrixEncoche/animationPrixEncoche.scss";
+@import"../../style/style2/sass/apparitionMenu/apparition.scss";
 
 .titreBloc{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-h1, h2, h3{
+h1, h2{
     font-family: "Shrikhand", serif;
     text-decoration: none;
 }
 
-p, h4{
-    font-family: 'Roboto', serif;
+h3{
+    font-family: "Roboto", serif;
 }
 
 h4{
-    font-size: 90%;
+    font-size: large;
+}
+
+p, h4{
+      font-family: 'Roboto', serif;
 }
 
 p{
-    font-size: 65%;
     padding-top: 10px;
+    font-size: 95%;
 }
 
 h2, h1{
@@ -41,7 +46,7 @@ header{
     align-items: center;
     top: 0;
     left: 0;
-    box-shadow: 0 0 0.25rem 0.125rem #777;
+    box-shadow: 0 0 0.25rem 0.125rem $box-shadow-header;
     margin: 0;
     background-color: $wbg;
     z-index: 98;
@@ -58,39 +63,33 @@ header{
     }
 }
 
-img{
+main #imgDeFond{
+    height: 18rem;
+    
+    img{
     width: 100%;
-    height: 15rem;
+    height: 18rem;
     object-fit: cover;
 }
-
-.prix{
-    font-size: smaller;
 }
 
-#entrees{
-    animation: apparition 1000ms 200ms both ease-in-out;
+
+
+.borderBottomTitre{
+    margin-bottom: 1rem;
 }
 
-.plats{
-    animation: apparition 1000ms 600ms both ease-in-out;
-}
-
-.desserts{
-        animation: apparition 1000ms 1000ms both ease-in-out;
-}
-#entrees, .plats, .desserts{
-    transform: translateY(0);
- }
 
 .titreEntrees, .titreDessert{
     padding-bottom: 1rem;
+    text-transform: uppercase;
 }
+
 .titreEntrees::after, .titreDessert::after{
     content: "";
     display: block;
-    width: 15%;
-    border-bottom: 2px #99E2D0 solid;
+    width: 10%;
+    border-bottom: 2px $color-tertiaire solid;
 }
 
 .titreCarte, .sousTitre{
@@ -101,7 +100,7 @@ img{
 
 
 footer{
-    background-color: #353535;
+    background-color: $background-footer;
     color: $wbg;
    
     #contenue_footer{
@@ -166,10 +165,6 @@ footer{
             width: 46%;
         }
 
-        .animationsEtPrix{
-            left: 90%;
-        }
-
         .btnCommander{
             width: 100%;
         }
@@ -188,18 +183,6 @@ footer{
 
 /* Keyframes */
 
-@keyframes apparition{
-    0% {
-    opacity: 0;
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
-}
-100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-}
-}
 
 @keyframes loading{
     0% {

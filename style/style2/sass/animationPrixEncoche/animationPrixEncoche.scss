@@ -2,7 +2,7 @@
 
 .blocMenu{
     background-color: $fondCarteGris ;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 2rem 2rem 0 0;
     position: relative;
     padding: 1rem;
     margin-top: -3rem;
@@ -13,13 +13,18 @@
     .animationsEtPrix{
         .prix{
             margin-right: 1rem;
-            
+            position: relative;
+            top: 13px;
+            font-weight: bold;
+        }
+
+        .animation{
+            animation: slideOut;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
         }
     }
-    #entrees, .plats, .desserts{
-        width: 100%;
-        transform: translateY(0);
-    }
+
     .titreEntre{
         padding-top: 1rem;
     }
@@ -29,7 +34,7 @@
         justify-content: space-between;
         align-items: center;
         border-radius: 1rem;
-        background-color: #fff;
+        background-color: $wbg;
         margin-bottom: 1rem;
         overflow: hidden;
         position: relative;
@@ -39,12 +44,10 @@
             &:hover{
             .animationsEtPrix{
 
-                .prix{
-                    transform: translateX(-70px);
-                    transition: 500ms ease-in-out;
-                }
                .animation{
-                transform: scaleX(1);
+                animation: slidein;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
                }
             }
 
@@ -54,7 +57,6 @@
             }
 
             .contenueCarte{
-                width: 60%;
                 transition: 600ms ease-in-out;
             }
         }
@@ -66,8 +68,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    width: 80%;
-    transition: 600ms ease-in-out;
+    width: 100%;
 }
 
 .animationsEtPrix{
@@ -75,25 +76,14 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    transition:  500ms 100ms ease-in-out;
-
-    .prix{
-        position: relative;
-        left: 70px;
-        transform-origin: right;
-        transition: 500ms ease-in-out;
-        top: 13px;
-    }
    
     .animation{
-        background-color: #99E2D0;
+        background-color: $color-tertiaire;
         position: relative;
         height: 5rem;
-        width: 4rem;
-        transform-origin: right;
-        transform: scaleX(0);
-        transition: opacity 100ms, transform 300ms 100ms linear, -webkit-transform 300ms 100ms linear
-    }
+        width: 0;
+    }    
+        
 
     .fa-check-circle{
         position: absolute;
@@ -102,3 +92,24 @@
         color: $wbg;
     }
 }
+
+@keyframes slidein {
+    0% {
+      width: 0;
+    }
+  
+    to {
+      width: 70px;
+      
+    }
+  }
+
+  @keyframes slideOut {
+      from {
+          width: 70px;
+      }
+
+      to {
+          width: 0;
+      }
+  }

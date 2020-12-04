@@ -9,8 +9,11 @@
 .desserts{
         animation: apparition 1000ms 1000ms both ease-in-out;
 }
+
 #entrees, .plats, .desserts{
+    width: 99%;
     transform: translateY(0);
+    margin-bottom: 1rem;
  }
 
  @keyframes apparition{

@@ -99,12 +99,12 @@
 }
 
 button {
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
-  background: linear-gradient(360deg, #9356dc, #ff79da);
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(360deg, #9356DC, #FF79DA);
   color: #fff;
   border-radius: 30px;
   border: none;
-  padding: 1rem;
+  padding: 1rem 3rem 1rem 3rem;
   font-size: inherit;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -247,9 +247,13 @@ body {
   margin: 0;
 }
 
-h1, h2, h3 {
+h1, h3 {
   font-family: "Shrikhand", serif;
   text-decoration: none;
+}
+
+h2 {
+  font-family: "Roboto", serif;
 }
 
 header {
@@ -257,7 +261,7 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  background: #ffffff;
+  background: #fff;
   -webkit-box-shadow: 0 0 0.25rem 0.125rem #777;
           box-shadow: 0 0 0.25rem 0.125rem #777;
   margin: 0;
@@ -273,11 +277,17 @@ header #logoHeader {
 #reservez {
   margin-top: 0;
   padding-top: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 main h3, main p {
   color: black;
   font-family: "Roboto", serif;
+}
+
+main p {
+  font-weight: lighter;
 }
 
 #fonctionement1 {
@@ -305,22 +315,22 @@ main h3, main p {
       -ms-flex-align: center;
           align-items: center;
   background-color: #f6f6f6;
-  -webkit-box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaa;
-          box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaa;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.5rem 0 rgb 170, 170, 170;
+          box-shadow: 0.1rem 0.1rem 0.5rem 0 rgb 170, 170, 170;
   position: relative;
   margin-bottom: 1.625rem;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
   border-radius: 1rem;
-  padding: 1rem 0;
-  width: 50%;
+  padding: 2rem 0 2rem 0;
+  width: 90%;
 }
 
 .conteneurFonctionement .fonctionement:hover {
-  background-color: #e4d5f6;
+  background-color: #f5edff;
 }
 
 .fonctionement:hover .fonctionementIcone {
-  color: #9356dc;
+  color: #9356DC;
 }
 
 .fonctionementTexte {
@@ -330,12 +340,12 @@ main h3, main p {
 }
 
 .localisation {
-  background-color: #dad9d9;
+  background-color: #eaeaea;
   padding: 1rem;
 }
 
 .reserveMenu {
-  background-color: #f1eeee;
+  background-color: #f6f6f6;
 }
 
 .reserveMenu, #logoHeader, .localisation {
@@ -343,9 +353,9 @@ main h3, main p {
 }
 
 button {
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
-  background: linear-gradient(360deg, #9356dc, #ff79da);
-  color: #ffffff;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(360deg, #9356DC, #FF79DA);
+  color: #fff;
   border-radius: 30px;
   border: none;
   padding: 1rem;
@@ -378,22 +388,18 @@ ul {
   color: #4441419d;
   font-size: 125%;
   text-align: center;
-  padding: 0 2rem;
-  width: 1.25rem;
+  padding-left: 10%;
+  padding-right: 5%;
 }
 
 .fonctionementCarteNumero {
-  background-color: #9356dc;
+  background-color: #9356DC;
   border-radius: 50%;
   color: #fff;
   font-size: 85%;
   padding: 0.375rem 0.625rem;
   position: absolute;
-  left: -1rem;
-}
-
-.fawesomeFooter {
-  padding-right: rem;
+  left: -10px;
 }
 
 img {
@@ -411,8 +417,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding: 10px;
 }
 
 ol {
@@ -435,9 +440,9 @@ main {
 .nouveau {
   position: absolute;
   padding: 10px 26px;
-  color: green;
+  color: #1caa47;
   font-family: "Roboto", serif;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   top: 12px;
   right: 12px;
   border-radius: 5px;
@@ -476,13 +481,13 @@ a {
 .carteMenu2 {
   position: relative;
   margin-bottom: 20px;
-  background-color: white;
+  background-color: #fff;
   border-radius: 1rem 1rem 1rem 1rem;
 }
 
 footer {
   background-color: #353535;
-  color: #ffffff;
+  color: #fff;
 }
 
 footer #contenueFooter {
@@ -494,7 +499,7 @@ footer .fawesomeFooter {
 }
 
 footer a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -511,8 +516,11 @@ footer li {
   html {
     font-size: 2vw;
   }
+  .fonctionementCarteNumero {
+    left: -1.5vw;
+  }
   img {
-    height: 25vw;
+    height: 19vw;
   }
   .conteneurFonctionement {
     -webkit-box-orient: initial;
@@ -522,9 +530,6 @@ footer li {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-  }
-  .conteneurFonctionement .fonctionement {
-    width: 30%;
   }
   .fonctionementTexte {
     font-size: 2vw;
