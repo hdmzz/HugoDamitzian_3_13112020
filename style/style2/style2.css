@@ -50,7 +50,6 @@
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
-  background-clip: text;
 }
 
 .coeurRempli {
@@ -273,7 +272,6 @@ header {
 }
 
 header #logoHeader {
-  font-size: 500;
   margin: auto;
 }
 
@@ -318,8 +316,8 @@ main p {
       -ms-flex-align: center;
           align-items: center;
   background-color: #f6f6f6;
-  -webkit-box-shadow: 0.1rem 0.1rem 0.5rem 0 rgb 170, 170, 170;
-          box-shadow: 0.1rem 0.1rem 0.5rem 0 rgb 170, 170, 170;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaaaaa;
+          box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaaaaa;
   position: relative;
   margin-bottom: 1.625rem;
   margin-left: 1rem;
