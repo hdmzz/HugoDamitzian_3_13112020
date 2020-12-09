@@ -12,7 +12,6 @@ button {
   margin-top: 1rem;
   border-radius: 2rem;
   border: none;
-  padding: 1rem 3rem 1rem 3rem;
   margin-top: 1rem;
   font-size: inherit;
   -webkit-transform: scale(1);
@@ -227,7 +226,7 @@ button:hover {
 .animationsEtPrix .animation {
   background-color: #99E2D0;
   position: relative;
-  height: 5rem;
+  height: 5.5rem;
   width: 0;
 }
 
@@ -388,6 +387,10 @@ header .logoHeader {
 header .fa-arrow-left {
   color: black;
   padding-left: 1rem;
+}
+
+button {
+  padding: 1rem 3rem 1rem 3rem;
 }
 
 main #imgDeFond {
