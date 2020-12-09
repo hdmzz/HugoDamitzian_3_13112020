@@ -351,6 +351,7 @@ p, h4 {
 p {
   padding-top: 10px;
   font-size: 95%;
+  font-weight: lighter;
 }
 
 h2, h1 {
