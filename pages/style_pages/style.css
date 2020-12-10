@@ -197,11 +197,6 @@ button:hover {
   transition: 900ms  ease-in-out;
 }
 
-.blocMenu .carte:hover .contenueCarte {
-  -webkit-transition: 600ms ease-in-out;
-  transition: 600ms ease-in-out;
-}
-
 .contenueCarte {
   padding: 1rem 0 1rem 0.2rem;
   text-overflow: ellipsis;

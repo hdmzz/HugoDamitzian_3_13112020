@@ -1,10 +1,12 @@
+@import "../variables/variables.scss";
+
 .coeur{
     position: relative;
     top: 5px;
     font-size: 175%;
     height: min-content;
     left: -2rem;
-    color: #000;
+    color: $coeurColor;
 
     &:hover{
         animation-name: coeur1;
@@ -38,27 +40,27 @@
   }
 
   .coeurRempli{
-    color:#d160f3;
+    color: $coeurColor75;
   }
 
   @keyframes coeur1{
       0%{
-          color: #000;
+          color: $coeurColor;
       }
 
       25%{
-          color:  #e4d5f6;
+          color: $coeurColor25;
       }
 
       50%{
-          color:  #e4d5f6;
+          color: $coeurColor25;
       }
 
       75%{
-          color: #d160f3;
+          color: $coeurColor75;
       }
 
       100%{
-          color: #d160f3;
+          color: $coeurColor75;
       }
   }

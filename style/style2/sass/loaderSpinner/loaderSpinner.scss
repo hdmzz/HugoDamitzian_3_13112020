@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     margin: 0;
-    background-color: #f5f4f4;
+    background-color: $backgroundColorLoaderSpinner;
     z-index: 99;
     position: fixed;
   }
@@ -17,7 +17,7 @@
     width: 10px;
     height: 10px;
     margin: 50vh auto;
-    background: #99E2D0;
+    background: $color-tertiaire;
     border-radius: 49px;
     z-index: 100;
     animation: loaderSpinner 1s 5 both alternate;
@@ -52,12 +52,12 @@
 		transform: translateY(0);
     }
 	100% {
-        width: 10px;
-		height: 50px;
-		background-color: $color-secondaire;
-        transform: translateY(-20px);
-        display: none;
-        z-index: -100;
+    width: 10px;
+    height: 50px;
+    background-color: $color-secondaire;
+    transform: translateY(-20px);
+    display: none;
+    z-index: -100;
 
 	}
 }

@@ -1,10 +1,9 @@
 @import "sass/coeur/coeur.scss";
 @import "sass/bouton/button.scss";
 @import "sass/variables/variables.scss";
+@import "../style2/sass/loaderSpinner/loaderSpinner.scss";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
-@import "../style2/sass/loaderSpinner/loaderSpinner.scss";
-
 html{
     font-size: 3vw;
 }
